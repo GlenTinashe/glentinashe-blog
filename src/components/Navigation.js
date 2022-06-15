@@ -70,21 +70,25 @@ const NavigationStyled = styled.nav`
         width: 100%;
         text-align: center;
         .active-class{
-            background-color:var(--primary-color)
+            background-color:var(--primary-color);
+            p{
+            small{
+                font-size:0.5rem;
+            }
         }
+        }
+       
         li{
             display: block;
             a{
                 display: block;
                 padding: .2rem 0;
                 position: relative;
-                z-index: 4;
                 
                 &:hover{
                     cursor: pointer;
                     background-color: var(--primary-color);
-                    transition: All 0.4s ease-in-out ;
-                    z-index: 3;
+                    transition: All 0.5s ease-in-out ;
                    
                 }
                 &::before {
@@ -95,7 +99,7 @@ const NavigationStyled = styled.nav`
                     width: 0;
                     height:50%;
                     opacity: 0.21;
-
+                    
                 }
             }
             a:hover::before{
