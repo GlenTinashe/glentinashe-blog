@@ -12,25 +12,25 @@ function Navigation() {
         </div>
         <ul className="nav-items">
             <li className="nav-items">
-                <NavLink to="/home" activeClassName="active-class">
+                <NavLink to="/" className={(navData) => (navData.isActive ? "active-style" : 'none')}>
                     <p>GT Muwishi</p>
                     <small>Beneath this mask Mr. Creedy...</small>
                 </NavLink>
             </li>
             <li className="nav-items">
-                <NavLink to="/about" activeClassName="active-class">About me</NavLink>
+                <NavLink to="/resume" className={(navData) => (navData.isActive ? "active-style" : 'none')}>About me</NavLink>
             </li>
             <li className="nav-items">
-                <NavLink to="/portfolio" activeClassName="active-class">The work of thy hands</NavLink>
+                <NavLink to="/portfolio" className={(navData) => (navData.isActive ? "active-style" : 'none')}>The work of thy hands</NavLink>
             </li>
             <li className="nav-items">
-                <NavLink to="/blogs" activeClassName="active-class">See what interests me</NavLink>
+                <NavLink to="/blogs" className={(navData) => (navData.isActive ? "active-style" : 'none')}>See what interests me</NavLink>
             </li>
             <li className="nav-items">
-                <NavLink to="/contact" activeClassName="active-class">Say Hi! </NavLink>
+                <NavLink to="/about" className={(navData) => (navData.isActive ? "active-style" : 'none')}>Say Hi! </NavLink>
             </li>
             <li className="nav-items">
-                <NavLink to="/coffee" activeClassName="active-class">Coffee Me</NavLink>
+                <NavLink to="/contact" className={(navData) => (navData.isActive ? "active-style" : 'none')}>Coffee Me</NavLink>
             </li>
         </ul>
         <footer>
