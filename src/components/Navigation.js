@@ -68,7 +68,8 @@ const NavigationStyled = styled.nav`
 
     .nav-items{
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding: .3rem;
         .active-class{
             background-color:var(--primary-color);
             p{
@@ -82,8 +83,13 @@ const NavigationStyled = styled.nav`
             display: block;
             a{
                 display: block;
-                padding: .2rem 0;
+                padding: .4rem 0;
                 position: relative;
+                z-index:10;
+                text-transform: capitalize;
+                transition: all .3s ease-in-out;
+                font-weight: 600;   
+                letter-spacing: .5px;
                 
                 &:hover{
                     cursor: pointer;
@@ -99,7 +105,7 @@ const NavigationStyled = styled.nav`
                     width: 0;
                     height:50%;
                     opacity: 0.21;
-                    
+
                 }
             }
             a:hover::before{

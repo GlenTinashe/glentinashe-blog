@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
+import HomePage from "./pages/HomePage"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <div className="lines-3"></div>
             <div className="lines-4"></div>
           </div>
+          <HomePage/>
         </MainContentStyle>
       </div>
     </div>
@@ -34,7 +36,7 @@ const MainContentStyle = styled.main`
     .lines-1, .lines-2, .lines-3, .lines-4{
       width: .1px;
       min-height:100vh;
-      background-color:blue;
+      background-color:var(--border-color);
     }
   }
 `

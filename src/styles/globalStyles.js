@@ -34,7 +34,17 @@ const GlobalStyle = createGlobalStyle `
     a{
         font-family: inherit;
         color:inherit;
-        font-size: inherit;
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 3.5rem;
+        color:var(--white-color);
+        span{
+            font-size: 3.5rem;
+        }
+    }
+    span{
+        color:var(--primary-color);
     }
 `;
 
