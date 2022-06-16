@@ -10,72 +10,25 @@ function Navigation() {
         <img src={avatar} alt="avatar" />
       </div>
       <ul className="nav-items">
-        <li className="nav-items">
-          <NavLink
-            to="/"
-            className={(navData) =>
-              navData.isActive ? "active-style" : "none"
-            }
-          >
-            <p>GT Muwishi</p>
-            <small>Beneath this mask Mr. Creedy...</small>
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/about" style={({ isActive }) => ({
-              color: isActive ? "#fff" : "#545e6f",
-              background: isActive ? "#007bff" : "#191D28",
-            })} 
-          >
-            About me
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink
-            to="/portfolio"
-            style={({ isActive }) => ({
-                color: isActive ? "#fff" : "#545e6f",
-                background: isActive ? "#007bff" : "#191D28",
-              })} 
-            >
-            The work of thy hands
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink
-            to="/blogs"
-            style={({ isActive }) => ({
-                color: isActive ? "#fff" : "#545e6f",
-                background: isActive ? "#007bff" : "#191D28",
-              })} 
-            >
-           See what interests me!{" "}
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink
-            to="/resume"
-            style={({ isActive }) => ({
-                color: isActive ? "#fff" : "#545e6f",
-                background: isActive ? "#007bff" : "#191D28",
-              })} 
-            >
-            Say Hi!{" "}
-          </NavLink>
-        </li>
-        
-        <li className="nav-items">
-          <NavLink
-            to="/contact"
-           style={({ isActive }) => ({
-              color: isActive ? "#fff" : "#545e6f",
-              background: isActive ? "#007bff" : "#191D28",
-            })} 
-          >
-            Coffee Me
-          </NavLink>
-        </li>
-      </ul>
+                <li className="nav-item">
+                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
+                </li>
+            </ul>
       <footer>
         <p>@2020 GTM</p>
       </footer>
@@ -84,83 +37,74 @@ function Navigation() {
 }
 
 const NavigationStyled = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  padding: 2rem 0;
-  border-right: 1px solid var(--border-color);
-
-  .avatar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
     width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-    padding: 1rem 0;
-    img {
-      width: 70%;
-      border-radius: 50%;
-      border: 6px solid var(--border-color);
-    }
-  }
-
-  .nav-items {
-    width: 100%;
-    text-align: left;
-    padding: 0.3rem;
-    .active-class {
-      background-color: var(--primary-color);
-      p {
-        small {
-          font-size: 0.5rem;
-        }
-      }
-    }
-
-    li {
-      display: block;
-      a {
-        display: block;
-        padding: 0.4rem 0;
-        position: relative;
-        z-index: 10;
-        text-transform: capitalize;
-        transition: all 0.3s ease-in-out;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-
-        &:hover {
-          cursor: pointer;
-          background-color: var(--primary-color);
-          transition: All 0.5s ease-in-out;
-        }
-        &::before {
-          content: "";
-          bottom: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 50%;
-          opacity: 0.21;
-        }
-      }
-      a:hover::before {
+    border-right: 1px solid var(--border-color);
+    .avatar{
         width: 100%;
-        height: 100%;
-      }
+        border-bottom: 1px solid var(--border-color);
+        text-align: center;
+        padding: 1rem 0;
+        img{
+            width: 70%;
+            border-radius: 50%;
+            border: 8px solid var(--border-color);
+        }
     }
-  }
-
-  footer {
-    border-top: 1px solid var(--border-color);
-    width: 100%;
-    p {
-      padding: 0.5rem 0;
-      font-size: 1rem;
-      display: block;
-      text-align: center;
+    .nav-items{
+        width: 100%;
+        text-align: center;
+        .active-class{
+            background-color: var(--primary-color-light);
+            color: white;
+        }
+        li{
+            display: block;
+            a{
+                display: block;
+                padding: .45rem 0;
+                position: relative;
+                z-index: 10;
+                text-transform: uppercase;
+                transition: all .4s ease-in-out;
+                font-weight: 600;
+                letter-spacing: 1px;
+                &:hover{
+                    cursor: pointer;
+                    color: var(--white-color);
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 50%;
+                    background-color: var( --primary-color);
+                    transition: All 0.4s cubic-bezier(1,-0.2,.25,.95) ;
+                    opacity: 0.21;
+                    z-index: -1;
+                }
+            }
+            a:hover::before{
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
-  }
+    footer{
+        border-top: 1px solid var(--border-color);
+        width: 100%;
+        p{
+            padding: 1.3rem 0;
+            font-size: 1.1rem;
+            display: block;
+            text-align: center;
+        }
+    }
 `;
-
 export default Navigation;
