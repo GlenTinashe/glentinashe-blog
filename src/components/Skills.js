@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MainLayout, InnerLayout } from "../styles/Layouts";
 import Title from "../components/Title";
-import ProgressBar from "../components/Title";
+import ProgressBar from "../components/ProgressBar";
 
 function Skills() {
   return (

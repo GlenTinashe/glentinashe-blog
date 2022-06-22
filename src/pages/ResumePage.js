@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Resume from "../components/Resume";
+import Skills from "../components/Skills";
+import { MainLayout } from "../styles/Layouts";
 
 function ResumePage() {
   return (
-    <div>ResumePage</div>
-  )
+    <MainLayout>
+      <Skills />
+      <Resume />
+    </MainLayout>
+  );
 }
 
-export default ResumePage
+export default ResumePage;
